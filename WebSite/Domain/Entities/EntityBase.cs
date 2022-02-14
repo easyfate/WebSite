@@ -2,9 +2,10 @@
 using System.ComponentModel.DataAnnotations;
 namespace WebSite.Domain.Entities
 {
-    public abstract class EntityBase
+    public abstract  class EntityBase
     {
         protected EntityBase() => DateAdded = DateTime.UtcNow;
+
         [Required]
         public Guid Id { get; set; }
 
@@ -15,7 +16,7 @@ namespace WebSite.Domain.Entities
         public virtual string Subtitle { get; set; }
 
         [Display(Name = "Полное описание")]
-        public virtual string TitleImagePath { get; set; }
+        public virtual string Text { get; set; }
 
         [Display(Name = "Титульная картинка")]
         public virtual string TitleImagePath { get; set; }
@@ -31,7 +32,5 @@ namespace WebSite.Domain.Entities
 
         [DataType(DataType.Time)]
         public DateTime DateAdded { get; set; }
-
-
     }
 }

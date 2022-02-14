@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Domain\Entities\EntityBase.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Remove="bundleconfig.json" />
     <Content Remove="compilerconfig.json" />
   </ItemGroup>
@@ -26,7 +22,6 @@
   <ItemGroup>
     <None Include="bundleconfig.json" />
     <None Include="compilerconfig.json" />
-    <None Include="Domain\Entities\EntityBase.cs" />
   </ItemGroup>
 
   <ItemGroup>
