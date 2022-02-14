@@ -24,12 +24,11 @@ namespace WebSite
         {
             if (env.IsDevelopment())
             {
-                
                 app.UseDeveloperExceptionPage();
             }
             
             app.UseRouting();
-            //Подлкючаем поддержку статичных файлов в приложении(css,js и тд)
+            //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ(css,js пїЅ пїЅпїЅ)
             app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
