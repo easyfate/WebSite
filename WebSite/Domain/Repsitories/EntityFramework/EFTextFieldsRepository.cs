@@ -43,7 +43,7 @@ namespace WebSite.Domain.Repsitories.EntityFramework
 
         public void DeleteTextField(Guid id)
         {
-            context.TextFields.Remove(new TextField) { Id = id}
+            context.TextFields.Remove(new TextField { Id = id});
             context.SaveChanges();
         }
     }

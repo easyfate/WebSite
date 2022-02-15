@@ -9,6 +9,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebSite.Service;
+using WebSite.Domain.Repsitories.Abstract;
+using WebSite.Domain.Repsitories.EntityFramework;
+using WebSite.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebSite
 {
@@ -25,7 +29,17 @@ namespace WebSite
             //include conf from appsetting.json
             Configuration.Bind("Project", new Config());
             services.AddControllersWithViews();
+
+            //inclide serivices
+            services.AddTransient<ITextFieldsRepository,EFTextFieldsRepository>();
+            services.AddTransient<IServiceItemRepository,EFServiceItemsRepository>();
+            services.AddTransient<DataManager>();
+
+            //including context in BD
+            services.AddDbContext<AppDbContext>(x => x.UseSqlServer(Config.ConnectionString));
+
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
