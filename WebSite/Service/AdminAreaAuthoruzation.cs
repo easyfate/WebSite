@@ -6,7 +6,7 @@ using System;
 
 namespace WebSite.Service
 {
-    public class AdminAreaAuthoruzation
+    public class AdminAreaAuthoruzation : IControllerModelConvention
     {
         private readonly string area;
         private readonly string policy;
